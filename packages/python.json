@@ -1,0 +1,16 @@
+{
+    "name": "python",
+    "description": "All you need to get started with the Python programming language",
+    "version": "3.14.5",
+    "platform": {
+        "any": {
+            "url": "https://www.python.org/ftp/python/${version}/Python-${version}.tgz",
+            "sha256": "9c22bfe9939a6c5418fc74b289a5f1cc41859ae82ac6b163016b5844bd0a86bc",
+            "method": "source",
+            "verification": {
+                "method": "sigstore",
+                "signature_url": "https://www.python.org/ftp/python/${version}/Python-${version}.tgz.sigstore"
+            }
+        }
+    }
+}
