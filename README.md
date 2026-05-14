@@ -1,2 +1,2 @@
-# repo
-A repository of packages for Chef
+# pkg
+The core set of packages for Chef
