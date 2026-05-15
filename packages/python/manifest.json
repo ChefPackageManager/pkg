@@ -1,5 +1,5 @@
 {
-    "name": "python"
+    "name": "python",
     "description": "All you need to get started with the Python programming language",
     "version": "3.14.5",
     "url": "https://www.python.org/ftp/python/${version}/Python-${version}.tgz",
