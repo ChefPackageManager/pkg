@@ -6,8 +6,8 @@ All installable packages are JSON and shell-scripts & include instructions on ho
 
 This section will include general information about writing a package and what a package's responsibilities are and aren't.
 
-So, basically, a package is, in the purest form, a directory in a repository (like this one) within a directory called `packages/`.  
-The name of the package is determined by the directory's name and are unique.
+So, basically, a package is, in the purest form, a directory in a repository (like this one) within a directory called `packages/`,  
+and which includes a `manifest.json` file.
 
 An example of a basic package looks like this:
 ```
@@ -21,7 +21,7 @@ packages/
 
 ---
 
-The `manifest.json` file tells `chef` about the package, such as the description and version,  
+The `manifest.json` file tells `chef` about the package, such as the name, description and version,  
 as well as information about where to download the package and its SHA256 sum used to check for corruption.
 
 The shell-scripts `build.sh`, and `verify.sh` are optional, but if they exist, `chef` will run them during the build
@@ -32,7 +32,8 @@ and verification steps, respectively.
 * `$OS`: the OS which `chef` detected the user to be on, which is either `"LINUX"` or `"MACOS"`.
 * more undocumented pieces which will likely change.
 
-When the scripts initially run, `chef` will put their `cwd` to be inside the untarred or unzipped downloaded artifact.
+When the scripts initially run, `chef` will put their `cwd` to be inside the untarred or unzipped downloaded artifact's
+directory.
 
 ---
 
